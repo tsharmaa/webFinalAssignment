@@ -19,17 +19,17 @@ document.addEventListener("DOMContentLoaded", function() {
         radio.addEventListener("change", toggleHourlyRateInput);
     });
 
-    // Event listener for form submission
-    form.addEventListener("submit", function(event) {
+   // Event listener for form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
         
-        event.preventDefault();
-
-        // Perform form validation
         if (validateForm()) {
-            
-            this.submit();
+            form.submit(); 
         }
     });
+});
 
     // Function to validate form fields
     function validateForm() {
