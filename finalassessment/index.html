@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <header>
+
+        <!-- Top Section -->
+        <div id="top-section" class="flex-container">
+            <img src="IMG_5313.jpg" alt="">
+            <div class="text-container">
+                <h1>Tanya Sharma</h1>
+                <h2>Web Developer</h2>
+                <nav>
+                    <ul>
+                        <li><a href="tanyaresumee.pdf" download>Resume</a></li>
+                        <li><a href="#contact-me-section">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+
+    <!--Infographic Section -->
+    <section id="infographic-section">
+        <div class="container">
+            <div class="about-me">
+                <h2>About Me and Academic Honesty</h2>
+                <p>Honesty Statement: I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy.No part of this assessment has been copied manually or electronically from any other source(including web sites) except for the informa@on supplied by the WEB222 instructors and / ormade available in this assessment for my use. I also declare that no part of this assignment hasbeen distributed to other students</p>
+            </div>
+            <div class="basic-info">
+                <h2>Basic Information</h2>
+                <ul>
+                    <li><strong>Name:</strong> Tanya Sharma</li>
+                    <li><strong>Age:</strong> 19</li>
+                    <li><strong>Email:</strong> tsharma81@myseneca.ca</li>
+                    <li><strong>Course:</strong> WEB222</li>
+                    <li><strong>Section:</strong> ZCC</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Education Section -->
+<section id="education-section">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="education-content">
+            <table class="education-table">
+                <caption>Diploma</caption>
+                <tr>
+                    <th>Program</th>
+                    <td>Computer Programming</td>
+                </tr>
+                <tr>
+                    <th>Duration</th>
+                    <td>2023-2025</td>
+                </tr>
+            </table>
+            <table class="education-table">
+                <caption>High School</caption>
+                <tr>
+                    <th>School</th>
+                    <td>Tagore International School</td>
+                </tr>
+                <tr>
+                    <th>Graduation Year</th>
+                    <td>2023</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- Contact Me Section -->
+<section id="contact-me-section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" list="cities" required>
+                <datalist id="cities">
+                    <option value="Toronto">
+                    <option value="Vancouver">
+                </datalist>
+            </div>
+            <div class="form-group">
+                <label for="postal-code">Postal Code:</label>
+                <input type="text" id="postal-code" name="postal-code" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d|[A-Za-z]\d[A-Za-z]\d\d[A-Za-z]" required>
+                
+            </div>
+            <div class="form-group">
+                <label>Reason for Contact:</label>
+                <div>
+                    <label><input type="radio" name="reason" value="Question"> Question</label>
+                    <label><input type="radio" name="reason" value="Comment"> Comment</label>
+                    <label><input type="radio" name="reason" value="Hiring"> Hiring</label>
+                </div>
+            </div>
+            <div class="form-group" id="hourly-rate" style="display: none;">
+                <label for="hourly-rate">Hourly Rate:</label>
+                <input type="text" id="hourly-rate" name="hourly-rate">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="additional-info">Additional Information:</label>
+                <input type="text" id="additional-info" name="additional-info">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
