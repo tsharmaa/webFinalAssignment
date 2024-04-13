@@ -1,60 +1,207 @@
+/* styles of header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+#top-section img {
+    width: 200px;
+    height: 250px;
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contact-me-section");
-    const rateInput = document.getElementById("hourly-rate");
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
 
-    // Function to toggle visibility of hourly rate input based on selected option
-    function toggleHourlyRateInput() {
-        if (document.querySelector('input[name="reason"]:checked').value === "Hiring") {
-            rateInput.style.display = "block";
-            rateInput.setAttribute("required", true);
-        } else {
-            rateInput.style.display = "none";
-            rateInput.removeAttribute("required");
-        }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* styles to the main content */
+main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.links a {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #004080;
+}
+
+/*styles to the footer */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Infographic section styles */
+#infographic-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+
+#infographic-section .about-me {
+    margin-right: 30px;}
+#infographic-section .basic-info {
+    width: 55%; 
+    background-color:  #cadbf1;    ; 
+    border: 1px solid #ced4da; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 9px rgba(44, 44, 44, 0.1); 
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+#infographic-section h2 {
+    margin-bottom: 30px;
+}
+
+
+/* styles to the contact card */
+.container {
+    background-color: #e6ddddfa; 
+    border: 1px solid #ced4da;
+    border-radius: 15px; 
+    box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
+    padding: 30px; 
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    font-size: 28px; 
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-card form label {
+    display: block;
+    margin-bottom: 15px; 
+}
+
+.contact-card form input[type="text"],
+.contact-card form input[type="email"],
+.contact-card form input[type="submit"],
+.contact-card form textarea {
+    width: calc(100% - 20px); 
+    padding: 12px; 
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+}
+
+.contact-card form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/*styles to education section */
+#education-section {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.education-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-table {
+    width: 45%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.education-table caption {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.education-table th,
+.education-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.education-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.education-table td {
+    background-color: #fff;
+}
+
+.education-table th,
+.education-table td {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .education-content {
+        flex-direction: column;
     }
 
-    // Event listener for radio buttons to toggle hourly rate input
-    document.querySelectorAll('input[name="reason"]').forEach((radio) => {
-        radio.addEventListener("change", toggleHourlyRateInput);
-    });
-
-   // Event listener for form submission
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        
-        if (validateForm()) {
-            form.submit(); 
-        }
-    });
-});
-
-    // Function to validate form fields
-    function validateForm() {
-        let isValid = true;
-
-        // Validate each input field
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-       
-        if (nameInput.value.trim() === "") {
-            isValid = false;
-            nameInput.classList.add("error");
-        } else {
-            nameInput.classList.remove("error");
-        }
-
-        //validation for email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-            isValid = false;
-            emailInput.classList.add("error");
-        } else {
-            emailInput.classList.remove("error");
-        }
-
-        return isValid;
+    .education-table {
+        width: 100%;
     }
-});
+}
+
+
